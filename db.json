@@ -1,0 +1,13 @@
+{
+  "servidores": [
+    {
+      "nombre": "Servi",
+      "cpu": 4,
+      "ram": 16,
+      "almacenamiento": "HDD",
+      "presupuesto": 1,
+      "id": "PCWm28tfLZM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

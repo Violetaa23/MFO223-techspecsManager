@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSpecs Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>TechSpecs Manager</h1>
+        <p>Catálogo de configuraciones recomendadas para servidores de bases de datos</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Formulario -->
+        <section class="form-section">
+            <h2>Registrar Servidor</h2>
+
+            <form id="serverForm">
+
+                <div class="form-group">
+                    <label for="nombre">Nombre del Servidor</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Ej: DB-Production-01"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="cpu">CPU (mínimo 2 núcleos)</label>
+                    <input
+                        type="number"
+                        id="cpu"
+                        min="2"
+                        placeholder="Ej: 8"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="ram">RAM (mínimo 4 GB)</label>
+                    <input
+                        type="number"
+                        id="ram"
+                        min="4"
+                        placeholder="Ej: 16"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="almacenamiento">Almacenamiento</label>
+                    <select id="almacenamiento" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="SSD">SSD</option>
+                        <option value="HDD">HDD</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="presupuesto">Presupuesto (€)</label>
+                    <input
+                        type="number"
+                        id="presupuesto"
+                        min="1"
+                        placeholder="Máximo 700€"
+                        required
+                    >
+                </div>
+
+                <button type="submit">
+                    Guardar Configuración
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Panel de visualización -->
+        <section class="cards-section">
+            <h2>Servidores Registrados</h2>
+
+            <div class="cards-container">
+
+            </div>
+
+        </section>
+
+        <script src="app.js"></script>
+
+    </main>
+
+</body>
+</html>
